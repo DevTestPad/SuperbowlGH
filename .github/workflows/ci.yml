@@ -1,17 +1,14 @@
-name: CI
+name: Sample Check
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  sample:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-
+    - name: Run a no-op command
+      run: echo "This is a sample check"
